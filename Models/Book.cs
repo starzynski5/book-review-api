@@ -2,16 +2,16 @@
 {
     public class Book
     {
-        private readonly int Id;
+        public int Id { get; }
 
-        private string Title { get { return Title; } set { Title = value; } }
+        public string Title { get; set; }
 
-        private string Description { get { return Description; } set { Description = value; } }
+        public string Description { get; set; }
 
-        private string Author {  get { return Author; } set { Author = value; } }
+        public string Author { get; set; }
 
-        private int ReleaseYear { get { return ReleaseYear; } set { ReleaseYear = value; } }
+        public int ReleaseYear { get; set; }
 
-        //list of reviews
+        public List<Review> Reviews { get; set; }
     }
 }
