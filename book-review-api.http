@@ -1,3 +1,33 @@
-@book_review_api_HostAddress = http://localhost:5298
+@rootURL = http://localhost:5298
 
+GET {{rootURL}}/api/book
+Accept: application/json
+
+###
+GET {{rootURL}}/api/book/1
+Accept: application/json
+
+###
+POST {{rootURL}}/api/book
+Content-Type: application/json
+{
+    "title": "Inny swiat",
+    "author": "Gustaw Herling-Grudziñski",
+    "releaseYear": 1951,
+    "description": "wspomnienia Gustawa Herlinga-Grudziñskiego, pisane w latach 1949–1950, opublikowane po raz pierwszy w przek³adzie angielskim w 1951 roku, a nastêpnie po polsku w 1953 w Londynie."
+}
+
+###
+PUT {{rootURL}}/api/book/1
+Content-Type: application/json
+{
+    "title": "Inny swiat 2",
+    "author": "Gustaw Herling-Grudziñski",
+    "releaseYear": 1951,
+    "description": "wspomnienia Gustawa Herlinga-Grudziñskiego, pisane w latach 1949–1950, opublikowane po raz pierwszy w przek³adzie angielskim w 1951 roku, a nastêpnie po polsku w 1953 w Londynie."
+}
+
+###
+DELETE {{rootURL}}/api/book/1
+Accept: application/json
 
