@@ -31,3 +31,35 @@ Content-Type: application/json
 DELETE {{rootURL}}/api/book/1
 Accept: application/json
 
+
+
+
+### REVIEW CONTROLLER
+GET {{rootURL}}/api/review
+Accept: application/json
+
+###
+GET {{rootURL}}/api/review/1
+Accept: application/json
+
+###
+POST {{rootURL}}/api/review
+Content-Type: application/json
+{
+    "Content": "Bardzo ciekawa ksiazka 2",
+    "Stars": 5,
+    "BookId": 2
+}
+
+###
+PUT {{rootURL}}/api/review/1
+Content-Type: application/json
+{
+    "Content": "Bardzo ciekawa ksiazka!",
+    "Stars": 4
+}
+
+###
+DELETE {{rootURL}}/api/review/2
+Accept: application/json
+

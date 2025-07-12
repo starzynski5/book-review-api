@@ -1,4 +1,6 @@
-﻿namespace book_review_api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace book_review_api.Models
 {
     public class Review
     {
@@ -12,6 +14,7 @@
 
         public int BookId { get; set; }
 
+        [JsonIgnore]
         public Book Book { get; set; }
 
     }
